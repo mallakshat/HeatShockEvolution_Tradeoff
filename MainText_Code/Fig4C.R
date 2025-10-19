@@ -224,27 +224,4 @@ ggplot(combined, aes(y = norm_mean_35, x = norm_mean_55)) +
   ylim(0.4,1.3)+xlim(0.1,1)
 dev.off()
 
-model <- lm(norm_mean_35 ~ norm_mean_55, data = combined)
-summary(model)$coefficients[2, 1] 
-summary(model)$r.squared           
-
-
 methanol_combined = combined
-
-##Eye test - combining methanol and succinate plots
-methanol_combined$Source <- "Methanol"
-succinate_combined$Source <- "Succinate"
-isolates_combined$Source <- "Evolution"
-colnames(isolates_combined)[colnames(isolates_combined) == "mean_time_55"] <- "norm_mean_55"
-colnames(isolates_combined)[colnames(isolates_combined) == "mean_time_35"] <- "norm_mean_35"
-combined_df <- bind_rows(methanol_combined, succinate_combined)
-
-tiff("Figures/Tradeoff_NaturalStrains_Combined.tiff", width = 5, height = 5, units = "in", res = 300)
-ggplot(combined_df, aes(x = norm_mean_55, y = norm_mean_35, color = Source)) +
-  geom_smooth(method = "lm", se = FALSE) +
-  geom_point(size=6,color="black",shape=18)+geom_point(size = 4,shape=18) +
-  theme_classic() + theme(text = element_text(size = 24), legend.position = "none")+
-  scale_color_manual(values = c("Methanol" = "red", "Succinate" = "deepskyblue", "Evolution" == "gray50")) +
-  ylab("Performance 35°C") + xlab("Performance Heat Shock") + 
-  xlim(0.1,1.1)+ylim(0.4, 1.4)
-dev.off()
