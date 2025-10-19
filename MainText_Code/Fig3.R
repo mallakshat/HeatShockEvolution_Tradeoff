@@ -1,5 +1,5 @@
 ##Figure 3 - Lag time and growth rate for evolved isolates.
-data = read.csv("CsvFilesForFigures/T20_Isolates_Qurve_Analysis.csv")
+data = read.csv("CsvFilesForFigures/T20_Isolates_Qurve_Analysis_55C.csv")
 
 summary_df <- data %>%
   filter(Isolate != "0A") %>%
