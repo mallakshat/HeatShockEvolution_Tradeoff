@@ -1,0 +1,27 @@
+Well,Condition,Replicate
+B1,Blank,Blank
+B2,Heat Shock,AA
+B3,Heat Shock,EA
+B4,Heat Shock,EC
+B5,Heat Shock,EB
+B6,Heat Shock,EC
+B7,Heat Shock,EA
+C2,Heat Shock,EC
+C3,Heat Shock,EB
+C4,Heat Shock,AA
+C5,Heat Shock,EA
+C6,Heat Shock,AA
+C7,Heat Shock,EB
+D2,Not,AA
+D3,Not,EA
+D4,Not,EC
+D5,Not,EB
+D6,Not,EC
+D7,Not,EA
+E2,Not,EC
+E3,Not,EB
+E4,Not,AA
+E5,Not,EA
+E6,Not,AA
+E7,Not,EB
+XX,Heat Shock,AA
