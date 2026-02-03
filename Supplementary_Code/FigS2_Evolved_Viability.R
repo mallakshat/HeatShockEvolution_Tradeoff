@@ -1,4 +1,4 @@
-data <- read.csv("Supplementary_Data/Viability_HS_EvolvedIsolates.csv")
+data <- read.csv("Supplementary_Data/Viability_HeatShock_EvolvedIsolates.csv")
 
 #based on the dilutions in your data set
 dilution_cols <- paste0("D", 0:5)
